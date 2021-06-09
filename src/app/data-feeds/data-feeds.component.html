@@ -1,0 +1,41 @@
+<div>
+  <mat-toolbar style="position: fixed;background-color: rgb(19, 19, 29);z-index: 99; ">
+    <span>Feeds</span>
+  </mat-toolbar>
+  <div class="container" style="padding-top: 3.6rem;">
+    <div class="row">
+      <div class="col-12" *ngFor='let feeds of allFeeds'>
+        <div class="card">
+
+          <span class="card-header" style="display: block;background-color: rgb(21 21 56);"> <img height="40" class="float-left rounded-circle" src={{feeds.photoURL}}>
+
+            <small style="float: right;color: rgb(182 174 255 / 44%);">{{feeds.date | date}}<br> {{feeds.time}}</small>
+
+
+              <small style="margin-left: 5px;font-size:medium;">{{feeds.userName}}</small>
+             <div> <small style="color: rgb(49, 80, 116);margin-left: 5px;">{{feeds.email}}</small></div>
+
+
+
+          <div>
+
+          </div>
+          </span>
+          <div class="row">
+            <div class="col">
+              <div *ngIf="feeds.postedMedia!='NA'" ><img  [src]="feeds.postedMedia" height="200" width="200"></div>
+              
+            </div>  
+            <div class="col">
+              <p class="card-text" style="padding: 1rem;font-size: large;">{{feeds.content}}</p>
+              
+            </div>  
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+  </div>
+</div>

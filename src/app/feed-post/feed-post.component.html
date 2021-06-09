@@ -1,0 +1,28 @@
+<div>
+  <mat-toolbar style="background-color: rgb(19, 19, 29)">
+  <span>Add Post</span>
+</mat-toolbar>
+<div class="container" style="height: 100%;">
+  <h1 class="display-1">Post Something!</h1>
+
+  <div class="card">
+    <div class="card-header">
+      <h1>Let the People know what you think!</h1></div>
+    <div class="card-body">
+      <label for="feedText"></label>
+      <textarea class="form-control" name="feedText" id="feedText" rows="3" [(ngModel)]="Content" placeholder="Type Something !" required></textarea>
+    </div>
+    <div class="card-footer">
+      <div class="input-group mb-3">
+        <input type="file"  class="form-control" id="imgupload" (change)="getFile($event)">
+        <div class="input-group-append">
+          <button type="button" class="btn btn-outline-primary" (click)="upload()"> Upload</button>
+        </div>
+      
+      </div>
+      <div *ngIf="uploadProgress" class="spinner-border text-primary"></div>
+     
+  {{status}}
+      <button type="button" class="btn btn-outline-info float-right" id="postBTN" (click)='onPost();'>Post</button></div>
+  </div>
+</div>

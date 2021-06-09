@@ -1,0 +1,31 @@
+<mat-toolbar style="position: sticky;background-color: rgb(37, 37, 61);">
+  <span>AlumniBook</span>
+</mat-toolbar>
+<mat-toolbar style="position: sticky;background-color: rgb(63, 63, 99);">
+  <span><img src={{profileLink}} class="rounded-circle" alt="Cinque Terre" height="50">
+    {{username}}</span>
+</mat-toolbar>
+
+<ul class="nav flex-column" style="text-decoration: none;">
+  <li class="nav-item">
+    <a class="nav-link" [routerLink]="['feeds']"><h3><img class='ico' src="../../assets/icons/home.svg">Home</h3></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" [routerLink]="['addpost']"><h3><img class='ico' src="../../assets/icons/plus-square.svg">Add Post</h3></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" [routerLink]="['search']"><h3><img class='ico' src="../../assets/icons/search1.svg">Alumni Search</h3></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" [routerLink]="['groupChat']"><h3><img class='ico' src="../../assets/icons/message-circle.svg">Group Chat</h3></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" [routerLink]="['profile']"><h3><img class='ico' src="../../assets/icons/user.svg">Profile</h3></a>
+  <!-- </li>
+    <li class="nav-item">
+    <a class="nav-link" ><h3>FAQ</h3></a>
+  </li> -->
+  <li class="nav-item">
+    <a class="nav-link" ><h3><img class='ico' [routerLink]="['/']"  (click)="logOut()" src="../../assets/icons/log-out.svg">Logout</h3></a>
+  </li>
+</ul>

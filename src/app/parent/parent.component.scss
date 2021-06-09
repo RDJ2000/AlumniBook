@@ -1,0 +1,12 @@
+.example-container{
+  mat-drawer{
+    width: 25%;
+    position: fixed;
+
+    background-color: rgb(9, 9, 36);
+  }
+  mat-drawer-content {
+    background-color: rgb(12, 12, 41);
+  }
+
+}

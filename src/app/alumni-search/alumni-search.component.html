@@ -1,0 +1,31 @@
+<mat-toolbar style="background-color: rgb(19, 19, 29)">
+  <span>Alumni Search</span>
+</mat-toolbar>
+<div class="container">
+  <div class="form-group mx-auto w-75 mt-4">
+
+    <input type="text" class="form-control" name="" id="searchBar" placeholder="Search by name,Passout Year" [(ngModel)]="keyword">
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col" *ngFor="let item of fetchedData |filter:keyword">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title" style="padding: 1%;"><img src={{item.photoURL}}   alt="NA" class="rounded-circle float-left " height="70" style="margin-right: 5px;" >{{item.displayName}}  <h5> {{item.role}}</h5></h3>
+           <div class="card-body">
+              <h5><b>EmailID: </b>{{item.email}}</h5>
+            <h5> <B>Branch: </B>{{item.branch}}</h5>
+            <h5><b>CurrentYear: </b>{{item.currentYear}}</h5>
+
+            <h5><b>Branch: </b>{{item.branch}}</h5>
+            <h5 *ngIf='!item.workingAs'><b>Working as: {{item.wokingAs}}</b></h5>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,31 @@
+#chatbtn{
+    background-color: blue;
+    color: white;
+}
+nav{
+    background-color: rgba(32, 36, 43, 0.301);
+}
+.card{
+    
+   box-shadow: lightseagreen;
+    margin: 0.5rem;
+    border-radius: 1rem;
+    background-color: rgb(30, 30, 172);
+    p{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin: -10px;
+    }
+    .card-header{
+      height: 1.3rem;
+    }
+    .card-footer{
+        height: 1.3rem;
+      }
+    
+}
+.row{
+    margin-bottom: 5rem;
+}
+.col{
+    float: right;
+}

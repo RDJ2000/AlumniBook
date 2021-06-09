@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/AlumniBook",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
