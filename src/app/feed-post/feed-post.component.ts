@@ -33,11 +33,12 @@ export class FeedPostComponent implements OnInit {
     
         this.PS.postFeed(this.Content,this.downloadURL).then(()=>{
           console.log("Posted Successfully")
+          
         }).catch((error)=>{
           console.log(error)
         })
       console.log("inpost");
-      
+      this.router.navigate(['home/feeds']);
      
      
     }
@@ -97,7 +98,7 @@ export class FeedPostComponent implements OnInit {
         this.status="file uploaded successfully"
         this.uploadProgress=false
         alert('Upload Successful');
-        this.router.navigate(['home/feeds']);
+      
       })
     })
   ).subscribe();
