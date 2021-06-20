@@ -13,13 +13,41 @@
         <div class="card">
           <div class="card-header">
             <h3 class="card-title" style="padding: 1%;"><img src={{item.photoURL}}   alt="NA" class="rounded-circle float-left " height="70" style="margin-right: 5px;" >{{item.displayName}}  <h5> {{item.role}}</h5></h3>
-           <div class="card-body">
-              <h5><b>EmailID: </b>{{item.email}}</h5>
-            <h5> <B>Branch: </B>{{item.branch}}</h5>
-            <h5><b>CurrentYear: </b>{{item.currentYear}}</h5>
+           
+              
+            <button style="background-color: rgb(35, 35, 90);border: none;float: right;" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" (click)="selectedCard(item)">
+            View Profile
+            </button>
+            <!-- The Modal -->
+<div class="modal fade " role='dialog' data-backdrop="false"  id="myModal" style="color: rgba(22, 22, 70, 0.692);">
+  <div class="modal-dialog">
+    <div class="modal-content">
 
-            <h5><b>Branch: </b>{{item.branch}}</h5>
-            <h5 *ngIf='!item.workingAs'><b>Working as: {{item.wokingAs}}</b></h5>
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h2 class="modal-title">{{SCData.displayName}}</h2>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <h5><b>EmailID: </b>{{SCData.email}}</h5>
+        <h5> <B>Branch: </B>{{SCData.branch}}</h5>
+        <h5><b>CurrentYear: </b>{{SCData.currentYear}}</h5>
+
+        <h5><b>Working as: {{SCData.workingAs}}</b></h5>
+        <h5><b>yearsOfExperience: {{SCData.yearsOfExperience}}</b></h5>
+        <h5><b>companyName: {{SCData.companyName}}</b></h5>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
           </div>
         </div>
       </div>
@@ -28,4 +56,4 @@
 
   </div>
 
-</div>
+

@@ -21,4 +21,8 @@ export class AlumniSearchComponent implements OnInit {
 
     })
   }
+  SCData:any
+  selectedCard(data: any){
+    this.SCData=data
+  }
 }

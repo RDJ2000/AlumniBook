@@ -31,6 +31,14 @@
         <label for="passout">Passout Year</label>
         <input type="number" class="form-control" name="passout" id="passout" placeholder="2020" [(ngModel)]='POYear'>
       </div>
+      <div class="form-group">
+        <label for="wy">Years of Experience</label>
+        <input type="number" class="form-control" name="wy" id="wy" placeholder="2" [(ngModel)]='PYYear'>
+      </div>
+      <div class="form-group">
+        <label for="cc">Current Company Name</label>
+        <input type="text" class="form-control" name="cc" id="cc" placeholder="eg. GOOGLE" [(ngModel)]='cName'>
+      </div>
     </div>
     <div id="inAlumni" *ngIf='role=="Student"'>
      <div class="form-group">
@@ -49,7 +57,10 @@
         <label for="ws">Working As</label>
         <input type="text" class="form-control" name="ws" id="ws" placeholder="Ex.Assistant Professor" [(ngModel)]='WAs'>
       </div>
-
+      <div class="form-group">
+        <label for="wy">Years of Experience</label>
+        <input type="text" class="form-control" name="wy" id="wy" placeholder="1" [(ngModel)]='Cyear'>
+      </div>
     </div>
     <button type="button" class="btn" id="loginBTN"
       style="background-color: rgb(41, 53, 118);color: antiquewhite;" (click)='updateDetails()'>Update</button>

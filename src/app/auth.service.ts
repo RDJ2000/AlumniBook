@@ -77,13 +77,17 @@ export class AuthService {
       role:data.role,
       uid:this.userData.uid,
       photoURL:this.userData.photoURL,
-      email:this.userData.email
+      email:this.userData.email,
+      companyName:data.companyName,
+      yearsOfExperience:data.yearsOfExperience
   })
   .then(() => {
       console.log("Document successfully written!");
+      alert("Profile Updated")
   })
   .catch((error) => {
       console.error("Error writing document: ", error);
+      alert("something went wrong ! Try Again..")
   });
   }
   }

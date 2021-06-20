@@ -7,7 +7,8 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent implements OnInit {
-
+  PYYear: any="NA"
+  cName:any="NA"
   Cyear:any='NA'
   POYear:any='NA'
   WAs:any='NA'
@@ -31,6 +32,9 @@ export class ProfileComponent implements OnInit {
       workingAs:this.WAs,
       branch:this.branch,
       role:this.role,
+      companyName:this.cName,
+      yearsOfExperience:this.PYYear
+
     }
    this.Auth.updateUserProfile(data)
   }
